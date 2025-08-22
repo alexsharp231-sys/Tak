@@ -1,0 +1,45 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/.gitignore
+index 0000000000000000000000000000000000000000..146e665ca5ce375a5fc26f676dc2293796f2fe0c 100644
+--- a//dev/null
++++ b/.gitignore
+@@ -0,0 +1,6 @@
++# Gradle
++.gradle/
++build/
++**/build/
++.idea/
++*.iml
+ 
+EOF
+)
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/Tak Game	 b//dev/null
+index 8b137891791fe96927ad78e64b0aad7bded08bdc..0000000000000000000000000000000000000000 undefined
+--- a/Tak Game	
++++ b//dev/null
+@@ -1 +0,0 @@
+-
+ 
+EOF
+)
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/build.gradle.kts
+index 0000000000000000000000000000000000000000..540ea04fe6e2cb3011538ddd26057c2d4b598e6a 100644
+--- a//dev/null
++++ b/build.gradle.kts
+@@ -0,0 +1,9 @@
++plugins {
++    kotlin("jvm") version "2.0.21" apply false
++}
++
++allprojects {
++    repositories {
++        mavenCentral()
++    }
++}
+ 
+EOF
+)
