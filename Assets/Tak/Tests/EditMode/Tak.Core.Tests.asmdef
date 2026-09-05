@@ -1,0 +1,14 @@
+{
+  "name": "Tak.Core.Tests",
+  "rootNamespace": "Tak.Tests",
+  "references": ["Tak.Core"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": ["nunit.framework.dll"],
+  "autoReferenced": false,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "versionDefines": [],
+  "noEngineReferences": true
+}
